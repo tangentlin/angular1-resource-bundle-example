@@ -6,19 +6,20 @@
     </md-toolbar>
     <md-content layout-padding>
         <md-input-container class="md-block">
-            <label>{{ 'username' | translate }}</label>
+            <!-- Use of translate attribute (instead of the translate filter) here is a good practice for non-dynamic values, it eliminates the need of setting up watch variables -->
+            <label translate="username"></label>
             <input required name="username" />
         </md-input-container>
 
         <md-input-container class="md-block">
-            <label>{{ 'password' | translate }}</label>
+            <label translate="password"></label>
             <input required name="password" type="password" />
         </md-input-container>
 
 
         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-            <md-button class="md-raised md-primary">{{ 'login' | translate }}</md-button>
-            <md-button class="md-raised md-warn">{{ 'bad_login' | translate }}</md-button>
+            <md-button class="md-raised md-primary" translate="login"></md-button>
+            <md-button class="md-raised md-warn" translate="bad_login"></md-button>
         </section>
     </md-content>
 </div>

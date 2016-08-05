@@ -1,0 +1,32 @@
+{
+  "name": "angular-js-example-with-internationalization",
+  "version": "1.0.0",
+  "description": "Angular with Internationalization",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangentlin/angular1-resource-bundle-example.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "argv": "0.0.2",
+    "browser-sync": "^2.12.12",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.6",
+    "gulp-uglify": "^1.5.3",
+    "newer": "^0.1.5"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-translate": "^2.11.1"
+  }
+}

@@ -3,15 +3,19 @@
     module.config(["$translateProvider",function($translateProvider){
 
         var en_translations = {
-            "lastname" : "Family Name",
-            "firstname" : "Given Name",
-            "sayhello" : 'Say Hello'
+            "username" : "Username",
+            "password" : "Password",
+            "login": "Login",
+            "bad_login": "Bad Login",
+            "error_101" : 'Sorry, your login information is incorrect.' //login error
         };
 
         var cn_translations = {
-            "lastname" : "姓",
-            "firstname" : "名",
-            "sayhello" : '打招呼'
+            "username" : "用户名",
+            "password" : "密码",
+            "login": "成功登录",
+            "bad_login": "模拟失败",
+            "error_101" : '对不起, 您的登陆数据出错' //login error
         };
 
 

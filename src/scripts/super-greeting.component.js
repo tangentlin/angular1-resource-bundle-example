@@ -12,6 +12,11 @@
 
         model.$onInit = function() {
             model.date = new Date();
+
+            //TODO: Research a better way to expose these constants to templates
+            model.TEXT_TOKEN = TEXT_TOKEN;
+            model.LANGUAGE_CODE = LANGUAGE_CODE;
+
             model.setLocale(preferLanguage);
 
             model.loginStatusLookup = {

@@ -6,16 +6,38 @@
     function controller($translate, $dynamicLocale) {
         var model = this;
 
-        var preferLanguage = 'zh';
+        var preferLanguage = LANGUAGE_CODE.CHINESE;
+
+        var NO_ERROR_CODE = 0;
 
         model.$onInit = function() {
             model.date = new Date();
             model.setLocale(preferLanguage);
+
+            model.loginStatusLookup = {
+                DEFAULT: 0,
+                SUCCESS: 1,
+                ERROR: -1
+            };
+
+            model.loginStatus = model.loginStatusLookup.DEFAULT;
+            model.loginErrorCode = NO_ERROR_CODE;
         };
 
         model.setLocale = function(languageCode) {
             $translate.preferredLanguage(languageCode);
             $dynamicLocale.set(languageCode);
+        };
+
+        model.loginSuccess_click = function() {
+            model.loginStatus = model.loginStatusLookup.SUCCESS;
+            model.loginErrorCode = NO_ERROR_CODE;
+        };
+
+
+        model.loginError_click = function() {
+            model.loginStatus = model.loginStatusLookup.ERROR;
+            model.loginErrorCode = 101;
         };
     }
 

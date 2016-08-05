@@ -16,10 +16,15 @@
             <input required name="password" type="password" />
         </md-input-container>
 
+        <div ng-if="model.loginStatus == model.loginStatusLookup.SUCCESS" translate="login_success"></div>
+
+        <ng-message ng-if="model.loginStatus == model.loginStatusLookup.ERROR && model.loginErrorCode > 0">
+            {{ 'error_' + model.loginErrorCode | translate }}
+        </ng-message>
 
         <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-            <md-button class="md-raised md-primary" translate="login"></md-button>
-            <md-button class="md-raised md-warn" translate="bad_login"></md-button>
+            <md-button class="md-raised md-primary" translate="login" ng-click="model.loginSuccess_click()"></md-button>
+            <md-button class="md-raised md-warn" translate="bad_login" ng-click="model.loginError_click()"></md-button>
         </section>
     </md-content>
 </div>

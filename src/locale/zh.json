@@ -1,0 +1,7 @@
+{
+    "username": "用户名",
+    "password": "密码",
+    "login": "登录",
+    "bad_login": "模拟失败",
+    "error_101": "对不起, 您的登陆数据出错"
+}

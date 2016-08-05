@@ -30,7 +30,7 @@
         };
 
         model.setLocale = function(languageCode) {
-            $translate.preferredLanguage(languageCode);
+            $translate.use(languageCode);
             $dynamicLocale.set(languageCode);
         };
 

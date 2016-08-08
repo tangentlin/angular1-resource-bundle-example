@@ -5,6 +5,19 @@
         </div>
     </md-toolbar>
     <md-content layout-padding>
+
+        <md-input-container class="md-block">
+            Note that the Chinese Language has an intentionally missing translation to demonstrate the language fallback feature.
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <span ng-repeat="language in model.availableLanguages">
+                <md-button ng-class="( language == model.currentLanguage ) ? 'md-raised md-primary' : ''"
+                ng-click="model.language_change(language)" translate="{{ model.TEXT_TOKEN.LANGUAGE_PREFIX + language }}"></md-button>
+            </span>
+
+        </md-input-container>
+
         <md-input-container class="md-block">
             <!-- Use of translate attribute (instead of the translate filter) here is a good practice for non-dynamic values, it eliminates the need of setting up watch variables -->
 

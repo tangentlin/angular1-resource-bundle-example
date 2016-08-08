@@ -4,5 +4,7 @@
     "login": "Login",
     "bad_login": "Bad Login",
     "login_success": "Congratulations, you have login successfully",
-    "error_101": "Sorry, your login information is incorrect."
+    "error_101": "Sorry, your login information is incorrect.",
+    "language_en": "English",
+    "language_zh": "Chinese"
 }

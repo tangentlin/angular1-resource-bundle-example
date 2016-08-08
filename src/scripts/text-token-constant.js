@@ -12,5 +12,6 @@ var TEXT_TOKEN = {
     LOGIN: 'login',
     BAD_LOGIN: 'bad_login',
     LOGIN_SUCCESS : 'login_success',
-    ERROR_PREFIX : 'error_'
+    ERROR_PREFIX : 'error_',
+    LANGUAGE_PREFIX: 'language_'
 };

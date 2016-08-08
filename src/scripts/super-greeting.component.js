@@ -6,8 +6,6 @@
     function controller($translate, $dynamicLocale) {
         var model = this;
 
-        var preferLanguage = LANGUAGE_CODE.CHINESE;
-
         var NO_ERROR_CODE = 0;
 
         model.$onInit = function() {
@@ -17,7 +15,13 @@
             model.TEXT_TOKEN = TEXT_TOKEN;
             model.LANGUAGE_CODE = LANGUAGE_CODE;
 
-            model.setLocale(preferLanguage);
+            //Current browser langauge cannot be read by JavaScript reliably
+            //However, http header would have Accept-Language attributes which can be helped with the help of server or Flash.
+            model.currentLanguage = LANGUAGE_CODE.ENGLISH;
+
+            model.availableLanguages = [LANGUAGE_CODE.ENGLISH, LANGUAGE_CODE.CHINESE];
+
+            model.setLocale(model.currentLanguage);
 
             model.loginStatusLookup = {
                 DEFAULT: 0,
@@ -43,6 +47,11 @@
         model.loginError_click = function() {
             model.loginStatus = model.loginStatusLookup.ERROR;
             model.loginErrorCode = 101;
+        };
+
+        model.language_change = function(language) {
+            model.currentLanguage = language;
+            model.setLocale(language);
         };
     }
 
